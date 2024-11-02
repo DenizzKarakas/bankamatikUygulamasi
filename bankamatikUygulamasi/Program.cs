@@ -17,9 +17,10 @@ namespace bankamatikUygulamasi
             Console.WriteLine("Kartsız İşlem Menüsü İçin: 2");
 
             int islem = Convert.ToInt32(Console.ReadLine());
-
+        
             if (islem == 1)
             {
+                
                 Console.WriteLine("Kartlı İşlem Menüsü");
                 Console.WriteLine("Şifrenizi Giriniz");
 
@@ -37,7 +38,7 @@ namespace bankamatikUygulamasi
                     Console.WriteLine("Eğitim Ödemeleri İçin: 4");
                     Console.WriteLine("Ödemeler İçin: 5");
                     Console.WriteLine("Bilgi Güncelleme İçin: 6");
-
+                    
                     int kartliİslem = Convert.ToInt32(Console.ReadLine());
 
                     if (kartliİslem == 1)
@@ -361,7 +362,11 @@ namespace bankamatikUygulamasi
                         Console.WriteLine("Lütfen Geçerli Bir İşlem Seçiniz");
                         goto KARTLIİŞLEMMENÜSÜ;
                     }
-                }    
+                } else
+                {
+                    Console.WriteLine("Yanlış Şifre Lütfen Tekrar Deneyiniz");
+                    goto ÇIKIŞ;
+                } 
 
                 }
             else if (islem == 2)
@@ -665,6 +670,11 @@ namespace bankamatikUygulamasi
                     goto KARTSIZİŞLEMMENÜSÜ;
                 }
             }
+            
+               
+                 
+
+            
 
 
 
